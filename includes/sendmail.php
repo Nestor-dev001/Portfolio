@@ -23,14 +23,14 @@ $mail = new PHPMailer(true);
 $mail->isSMTP();
 $mail->Host = 'smtp.gmail.com';
 $mail->SMTPAuth = true;
-$mail->Username = 'nestornkwegu@gmail.com';
-$mail->Password = 'odop djxb glod ufui';
+$mail->Username = 'example@gmail.com';
+$mail->Password = 'hello';
 $mail->SMTPSecure = 'tls';
 $mail->Port = 587;
 
-$mail->setFrom('nestornkwegu@gmail.com', 'Portfolio Contact');
+$mail->setFrom('example@gmail.com', 'Portfolio Contact');
 $mail->addReplyTo($email, $name);
-$mail->addAddress('nestornkwegu@gmail.com');
+$mail->addAddress('example@gmail.com');
 
 $mail->isHTML(true);
 $mail->Subject = "Portfolio Contact Message";
@@ -48,12 +48,12 @@ $reply = new PHPMailer(true);
 $reply->isSMTP();
 $reply->Host = 'smtp.gmail.com';
 $reply->SMTPAuth = true;
-$reply->Username = 'nestornkwegu@gmail.com';
-$reply->Password = 'odop djxb glod ufui';
+$reply->Username = 'example@gmail.com';
+$reply->Password = 'hello';
 $reply->SMTPSecure = 'tls';
 $reply->Port = 587;
 
-$reply->setFrom('nestornkwegu@gmail.com', 'Nestor');
+$reply->setFrom('example@gmail.com', 'Nestor');
 $reply->addAddress($email);
 
 $reply->isHTML(true);
