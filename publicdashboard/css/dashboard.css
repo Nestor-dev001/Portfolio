@@ -1,0 +1,171 @@
+:root {
+    --bg: #070818;
+    --sidebar: #0c0f2a;
+    --card: #111327;
+    --accent: #22afe0;
+    --accent-soft: rgba(34, 175, 224, 0.15);
+    --text: #e4e7ec;
+    --muted: #8b90a0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.dashboard {
+    display: flex;
+}
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: var(--sidebar);
+    padding: 25px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    margin-bottom: 30px;
+    color: var(--accent);
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    margin-bottom: 10px;
+}
+
+.nav-item a {
+    display: block;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.nav-item a:hover {
+    background: var(--accent-soft);
+}
+
+.nav-item.active a {
+    background: var(--accent);
+    color: #000;
+}
+
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    background: var(--card);
+    padding: 25px;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.content-box {
+    margin-top: 30px;
+    background: var(--card);
+    padding: 25px;
+    border-radius: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #070818;
+    color: white;
+    margin-bottom: 12px;
+}
+
+button {
+    background: var(--accent);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Project cards grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-actions a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+.project-actions .delete {
+    color: #ff5a5a;
+}
+
+/* Add Project Form toggle */
+.project-form {
+    display: none;
+    background: #0c0f2a;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.project-form.show {
+    display: block;
+}
